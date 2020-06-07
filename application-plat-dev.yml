@@ -1,0 +1,6 @@
+#服务提供者端口号设置
+server:
+  port: 8001
+spring:
+  application:
+    name: PLAT-SERVICE #服务名不能用下划线,在eureka可视化界面中展示
