@@ -1,0 +1,14 @@
+#服务提供者端口号设置
+server:
+  port: 1300
+spring:
+  application:
+    name: ZUUL-SERVER #服务名不能用下划线,在eureka可视化界面中展示
+#网关的配置
+zuul:
+  prefix: /services #请求的前缀
+  ignoredServices: "*" #忽略所有服务请求，只能访问配置过的路由
+  routes: #路由组
+    plat: #平台路由
+      path: /plat/** #路径 plat/**的请求,全都到了PLAT-SERVICE服务里去了
+      serviceId: PLAT-SERVICE #平台服务名
